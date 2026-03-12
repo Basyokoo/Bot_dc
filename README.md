@@ -80,7 +80,7 @@ peut entraîner un comportement imprévisible de l'entité.
 La Fondation ne saurait être tenue responsable des anomalies
 résultant d'une mauvaise configuration.
 
-████████████████████████████████████████████████████████████████████████
-██                  FIN DU DOCUMENT CLASSIFIÉ                          ██
-████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████
+██                        FIN DU DOCUMENT CLASSIFIÉ                       ██
+████████████████████████████████████████████████████████████████████████████
 </pre>
