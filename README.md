@@ -1,12 +1,12 @@
 <div>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/SCP_Foundation_%28emblem%29.svg" width="200" align="left">
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/97/SCP_Foundation_Logo_Transparent_Light_Grey.png" width="210" align="left">
 <p style="font-size:32px; font-weight:bold; margin:0;">
 <div>
 
 
 <pre>
-█████████████████████████████████████████████████████████████████
+█████████████████████████████████████████████████████████████████████████
 ██                                                                                                ██
 ██                                           Myruae Bot                                           ██
 ██                                                                                                ██
