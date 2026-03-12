@@ -12,7 +12,7 @@
 <pre>
 ITEM ID : MYRUAE-BOT-001
 
-NIVEAU D'ACCÈS : ████
+NIVEAU D'ACCÈS : 5 (Nécessite un superviseur)
 CLASSE D’OBJET : UTILITAIRE / AUTOMATISATION
 </pre>
 
@@ -27,8 +27,7 @@ L'entité opère exclusivement dans des environnements contrôlés appelés
 "serveurs Discord" et répond aux commandes émises par les utilisateurs
 autorisés.
 
-STATUT ACTUEL :
-ACTIF
+STATUT ACTUEL : ACTIF
 
 ────────────────────────────────────────────────────────────────
 
