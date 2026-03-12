@@ -1,8 +1,6 @@
-<table>
-<tr>
-<td>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/97/SCP_Foundation_Logo_Transparent_Light_Grey.png" width="180" align="left">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/97/SCP_Foundation_Logo_Transparent_Light_Grey.png" width="159" align="left">
 
 <pre>
 ████████████████████████████████████████████████████████████████████████
@@ -17,9 +15,7 @@ ITEM ID : MYRUAE-BOT-001
 NIVEAU D'ACCÈS : ████
 CLASSE D’OBJET : UTILITAIRE / AUTOMATISATION
 </pre>
-</td>
-</tr>
-</table>
+
 
 <pre>
 DESCRIPTION :
