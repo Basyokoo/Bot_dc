@@ -1,10 +1,9 @@
-import discord 
+import discord
 from discord.ext import commands 
 import asyncio
 import signal
 import time
-
-from cogs.Data          import Data
+from cogs.Data import Data
 
 TOKEN = Data("./data/token.json").load_json()["token"]
 
@@ -27,7 +26,10 @@ bot = MyBot()
 @bot.event
 async def on_ready():
     testmess = bot.get_channel(1481952817856909315)
-    await testmess.send("Hi !")
+    if testmess is not None:
+        await testmess.send("Hi !")
+    else:
+        print("Erreur : le canal n'a pas été trouvé")
     print(f"Cogs chargés : {bot.cogs}")  # <- Affiche tous les cogs
 
 
