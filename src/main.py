@@ -30,7 +30,7 @@ async def on_ready():
         await testmess.send("Hi !")
     else:
         print("Erreur : le canal n'a pas été trouvé")
-    print(f"Cogs chargés : {bot.cogs}")  # <- Affiche tous les cogs
+    print(f"Cogs chargés : {bot.cogs}")
 
 
 

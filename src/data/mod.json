@@ -1,11 +1,12 @@
 {
-    "warn": [
-       
-    ],
-    "ban": [
-       
-    ],
-    "mute": [
-        
-    ]
+    "user": {
+        "1211378838970310767": {
+            "warn count": 0,
+            "bans count": 0,
+            "mute count": 0,
+            "bans": [],
+            "warns": [],
+            "mutes": []
+        }
+    }
 }
