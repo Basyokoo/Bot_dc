@@ -1,85 +1,94 @@
+<div align="center">
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/97/SCP_Foundation_Logo_Transparent_Light_Grey.png" width="120"/>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/97/SCP_Foundation_Logo_Transparent_Light_Grey.png" width="159" align="left">
+```
+█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
+█    F O N D A T I O N   S C P  —  D O C U M E N T   C L A S S I F I É   █
+█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
+```
 
-<pre>
-████████████████████████████████████████████████████████████████████████
-██                                                                    ██
-██              FONDATION SCP — DOCUMENT CLASSIFIÉ                    ██
-██                                                                    ██
-████████████████████████████████████████████████████████████████████████
-</pre>
-<pre>
-ITEM ID : MYRUAE-BOT-001
+![Status](https://img.shields.io/badge/STATUT-INACTIF-red?style=for-the-badge&labelColor=000000)
+![Clearance](https://img.shields.io/badge/NIVEAU_D'ACCÈS-5-orange?style=for-the-badge&labelColor=000000)
+![Class](https://img.shields.io/badge/CLASSE-UTILITAIRE-blue?style=for-the-badge&labelColor=000000)
+![Discord](https://img.shields.io/badge/PLATEFORME-DISCORD-5865F2?style=for-the-badge&logo=discord&logoColor=white&labelColor=000000)
 
-NIVEAU D'ACCÈS : 5 (Nécessite un superviseur)
-CLASSE D’OBJET : UTILITAIRE / AUTOMATISATION
-</pre>
+</div>
 
+---
 
-<pre>
-DESCRIPTION :
-Myruae Bot est une entité logicielle conçue pour assister les opérateurs
-de serveurs Discord dans la gestion, la modération et l'automatisation
-de certaines procédures numériques.
+## `ITEM ID : MYRUAE-BOT-001`
 
-L'entité opère exclusivement dans des environnements contrôlés appelés
-"serveurs Discord" et répond aux commandes émises par les utilisateurs
-autorisés.
+> ⚠️ **AVERTISSEMENT** — Ce document est classifié **Niveau 5**.  
+> Tout accès non autorisé sera signalé au O5 Council.  
+> *Sécuriser. Contenir. Protéger.*
 
-STATUT ACTUEL : ACTIF
+---
 
-────────────────────────────────────────────────────────────────
+## 📋 Description
 
-FONCTIONNALITÉS CONNUES :
+**Myruae Bot** est une entité logicielle conçue pour assister les opérateurs de serveurs Discord dans la **gestion**, la **modération** et l'**automatisation** de procédures numériques.
 
-• _________________________________
-• _________________________________
-• _________________________________
-• _________________________________
-• _________________________________
-• _________________________________
-• _________________________________
-• _________________________________
+L'entité opère exclusivement dans des environnements contrôlés appelés *"serveurs Discord"* et répond aux commandes émises par les utilisateurs autorisés.
 
-────────────────────────────────────────────────────────────────
+---
 
-MODULES EN DÉVELOPPEMENT :
+## ⚙️ Fonctionnalités
 
-• _________________________________
-• _________________________________
-• _________________________________
-• _________________________________
+| Commande | Statut | Description |
+|----------|--------|-------------|
+| `mute` | ✅ Opérationnel | Réduire un utilisateur au silence |
+| `warn` | ✅ Opérationnel | Émettre un avertissement officiel |
+| `ban` | ✅ Opérationnel | Bannir définitivement un sujet |
 
-────────────────────────────────────────────────────────────────
+---
 
-COMMANDES PRINCIPALES :
+## 🔬 Modules en développement
 
-• _________________________________
-• _________________________________
-• _________________________________
-• _________________________________
+```
+[ ██████████░░░░░░░░░░ ] — En cours...
+```
 
-────────────────────────────────────────────────────────────────
+- `[CLASSIFIÉ]` — Module #1
+- `[CLASSIFIÉ]` — Module #2
+- `[CLASSIFIÉ]` — Module #3
+- `[CLASSIFIÉ]` — Module #4
 
-PROTOCOLE D’UTILISATION :
+> *Les détails de ces modules ne seront divulgués qu'aux personnels habilités.*
 
-1. Inviter Myruae Bot sur un serveur Discord.
-2. Configurer les permissions nécessaires.
-3. Utiliser les commandes disponibles.
-4. Observer le comportement de l’entité logicielle.
+---
 
-────────────────────────────────────────────────────────────────
+## 🚀 Protocole d'utilisation
 
-AVERTISSEMENT :
+```bash
+# Étape 1 — Inviter l'entité sur votre serveur Discord
+# Étape 2 — Configurer les permissions nécessaires
+# Étape 3 — Utiliser les commandes disponibles
+# Étape 4 — Observer le comportement de l'entité
+```
 
-Toute modification non autorisée du code source de MYRUAE-BOT-001
-peut entraîner un comportement imprévisible de l'entité.
+1. **Inviter** Myruae Bot sur un serveur Discord.
+2. **Configurer** les permissions nécessaires.
+3. **Utiliser** les commandes disponibles.
+4. **Observer** le comportement de l'entité logicielle.
 
-La Fondation ne saurait être tenue responsable des anomalies
-résultant d'une mauvaise configuration.
+---
 
-████████████████████████████████████████████████████████████████████████████
-██                        FIN DU DOCUMENT CLASSIFIÉ                       ██
-████████████████████████████████████████████████████████████████████████████
-</pre>
+## ⚠️ Avertissement
+
+> Toute **modification non autorisée** du code source de `MYRUAE-BOT-001` peut entraîner un comportement imprévisible de l'entité.  
+> La Fondation ne saurait être tenue responsable des anomalies résultant d'une mauvaise configuration.
+
+---
+
+<div align="center">
+
+```
+█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
+█         FIN DU DOCUMENT CLASSIFIÉ                █
+█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
+```
+
+*Fondation SCP — Sécuriser. Contenir. Protéger.*
+
+</div>
