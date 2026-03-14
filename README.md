@@ -2,11 +2,13 @@
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/SCP_Foundation_Logo_Transparent_Light_Grey.png" width="120"/>
 
-```
-█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
-█    F O N D A T I O N   S C P  —  D O C U M E N T   C L A S S I F I É   █
-█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
-```
+<pre>
+██████████████████████████████████████████████████████████████████████████
+██                                                                      ██
+██       F O N D A T I O N   S C P  —  D O C U M E N T   C L A S S I F I É       ██
+██                                                                      ██
+██████████████████████████████████████████████████████████████████████████
+</pre>
 
 ![Status](https://img.shields.io/badge/STATUT-INACTIF-red?style=for-the-badge&labelColor=000000)
 ![Clearance](https://img.shields.io/badge/NIVEAU_D'ACCÈS-5-orange?style=for-the-badge&labelColor=000000)
@@ -83,11 +85,13 @@ L'entité opère exclusivement dans des environnements contrôlés appelés *"se
 
 <div align="center">
 
-```
-█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
-█         FIN DU DOCUMENT CLASSIFIÉ                █
-█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
-```
+<pre>
+████████████████████████████████████████████████████
+██                                                ██
+██         FIN DU DOCUMENT CLASSIFIÉ             ██
+██                                                ██
+████████████████████████████████████████████████████
+</pre>
 
 *Fondation SCP — Sécuriser. Contenir. Protéger.*
 
