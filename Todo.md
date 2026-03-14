@@ -32,9 +32,6 @@
 | Tâche | Priorité | Statut |
 |-------|----------|--------|
 | Commande `kick` | 🔴 Haute | ⬜ À faire |
-| Commande `ban` | 🔴 Haute | ⬜ À faire |
-| Commande `mute` / `timeout` | 🔴 Haute | ⬜ À faire |
-| Commande `warn` | 🔴 Haute | ⬜ À faire |
 | Commande `pardon` *(supprime toutes les infractions d'un sujet)* | 🔴 Haute | ⬜ À faire |
 | Logs de modération | 🟡 Moyenne | ⬜ À faire |
 | Anti-spam | 🟡 Moyenne | ⬜ À faire |
@@ -71,7 +68,6 @@
 | Tâche | Priorité | Statut |
 |-------|----------|--------|
 | Système de monnaie virtuelle | 🔴 Haute | ⬜ À faire |
-| Catalogue d'articles | 🟡 Moyenne | ⬜ À faire |
 | Achat de rôles / cosmétiques | 🟡 Moyenne | ⬜ À faire |
 | Historique des transactions | 🟠 Basse | ⬜ À faire |
 | Système économique inter-serveur | 🟠 Basse | ⬜ À faire |
@@ -121,8 +117,6 @@
 |-------|----------|--------|
 | Dashboard web | 🟠 Basse | ⬜ À faire |
 | IA intégrée | 🟠 Basse | ⬜ À faire |
-| API du bot | 🟠 Basse | ⬜ À faire |
-| Système de plugins | 🟠 Basse | ⬜ À faire |
 | `[CLASSIFIÉ]` — Modules non divulgués | ❓ Inconnu | 🔒 Classifié |
 
 ---
@@ -135,8 +129,6 @@
 | Gestion des erreurs | 🔴 Haute | ⬜ À faire |
 | Base de données | 🔴 Haute | ⬜ À faire |
 | Système de logs | 🟡 Moyenne | ⬜ À faire |
-| Docker | 🟠 Basse | ⬜ À faire |
-| Déploiement automatique | 🟠 Basse | ⬜ À faire |
 
 ---
 
