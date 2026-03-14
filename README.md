@@ -5,7 +5,7 @@
 <pre>
 ██████████████████████████████████████████████████████████████████████████
 ██                                                                      ██
-██       F O N D A T I O N   S C P  —  D O C U M E N T   C L A S S I F I É       ██
+██  F O N D A T I O N   S C P  —  D O C U M E N T   C L A S S I F I É   ██
 ██                                                                      ██
 ██████████████████████████████████████████████████████████████████████████
 </pre>
@@ -88,7 +88,7 @@ L'entité opère exclusivement dans des environnements contrôlés appelés *"se
 <pre>
 ████████████████████████████████████████████████████
 ██                                                ██
-██         FIN DU DOCUMENT CLASSIFIÉ             ██
+██          FIN DU DOCUMENT CLASSIFIÉ             ██
 ██                                                ██
 ████████████████████████████████████████████████████
 </pre>
