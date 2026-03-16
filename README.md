@@ -94,5 +94,3 @@ L'entité opère exclusivement dans des environnements contrôlés appelés *"se
 </pre>
 
 *Fondation SCP — Sécuriser. Contenir. Protéger.*
-
-</div>

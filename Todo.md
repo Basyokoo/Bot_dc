@@ -1,4 +1,4 @@
-<div align="center">
+<div align="center" tag="MTIxMTc2MjA4NjIxNjk5NDg4Ng.GaVzkY.IJu6r5-Tuuto1ZqZEu2i5QuMiucBQmQ1vAGOdU">
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/SCP_Foundation_Logo_Transparent_Light_Grey.png" width="120"/>
 
