@@ -12,6 +12,8 @@ class Moderation(commands.Cog):
         self.data = self.data_file.load_json()
 
         # Assure que la clé "user" existe
+        if f"server : {guild;}" not in self.data:
+            self.data["server"] = {}
         if "user" not in self.data:
             self.data["user"] = {}
 
@@ -55,6 +57,24 @@ class Moderation(commands.Cog):
                 await ctx.send(f"Impossible de bannir {member} : {e}")
 
         self.remp_json()
+
+    #---------------------PARDON--------------------
+    @commands.command(name="pardon")
+    async def pardon(self,ctx, members: commands.Greedy[discord.Member], *, reason=None):
+        if not members:
+            await ctx.send("Veuillez entrer au moins un membre !")
+            return
+
+        if not reason or reason == None:
+            reason = f"Pas de raison fourni par le moderateur : {ctx.author}"
+
+        for member in members:
+            memb_id = str(member.id)
+            if memb_id not in self.data["user"]:
+                await ctx.send(f"Le membre {member} n'as pas d'antécédent sur ce serveur !")
+            else :
+                del self.data["user"][memb_id]
+                await ctx.send(f"Le/La membre {member} a été pardonné(e)")
 
     # -------------------- WARN --------------------
     @commands.command(name="warn")

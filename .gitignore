@@ -1,3 +1,4 @@
 token.json
 ./venv/
 __pycache__
+mod.json
