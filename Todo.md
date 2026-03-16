@@ -31,12 +31,19 @@
 
 | Tâche | Priorité | Statut |
 |-------|----------|--------|
-| Commande `kick` | 🔴 Haute | ⬜ À faire |
-| Commande `pardon` *(supprime toutes les infractions d'un sujet)* | 🔴 Haute | ⬜ À faire |
-| Logs de modération | 🟡 Moyenne | ⬜ À faire |
 | Anti-spam | 🟡 Moyenne | ⬜ À faire |
 | Anti-link | 🟡 Moyenne | ⬜ À faire |
 | Auto-modération | 🟡 Moyenne | ⬜ À faire |
+
+---
+
+## 📄 Logs
+
+| Tâche | Priorité | Statut |
+|-------|----------|--------|
+| message envoyer | 🔴 Haute | ⬜ À faire |
+| action faite | 🔴 Haute | ⬜ À faire |
+| heures de vocal | 🟡 Moyenne | ⬜ À faire |
 
 ---
 

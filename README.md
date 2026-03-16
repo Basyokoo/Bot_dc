@@ -39,6 +39,8 @@ L'entité opère exclusivement dans des environnements contrôlés appelés *"se
 
 | Commande | Statut | Description |
 |----------|--------|-------------|
+| `pardon` | ✅ Opérationnel | enlever les antécédent d'un utilisateur|
+| `kick` | ✅ Opérationnel | expulser un utilisateur|
 | `mute` | ✅ Opérationnel | Réduire un utilisateur au silence |
 | `warn` | ✅ Opérationnel | Émettre un avertissement officiel |
 | `ban` | ✅ Opérationnel | Bannir définitivement un sujet |
@@ -48,7 +50,7 @@ L'entité opère exclusivement dans des environnements contrôlés appelés *"se
 ## 🔬 Modules en développement
 
 ```
-[ ██████████░░░░░░░░░░ ] — En cours...
+[ ███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ ] — En cours...
 ```
 
 - `[CLASSIFIÉ]` — Module #1
