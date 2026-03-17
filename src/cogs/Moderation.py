@@ -1,15 +1,17 @@
 import discord
 from discord.ext import commands
-from .Data import Data
+from utils.Data import Data 
 import asyncio
+from utils.base_cog import BaseCog
 
-class Moderation(commands.Cog):
+class Moderation(BaseCog):
     """Cog pour la modération : ban, mute, warn..."""
 
     def __init__(self, bot):
         self.bot = bot
         self.data_file = Data("./data/mod.json")
         self.data = self.data_file.load_json()
+        super().__init__(bot, data, data_file)
 
     # -------------------- BAN --------------------
     @commands.command(name="ban")
@@ -216,41 +218,6 @@ class Moderation(commands.Cog):
                 "mutes": [],
                 "kicks": []
             }
-
-    # ------------------- BEFORE_INVOKE -------------------
-    async def cog_before_invoke(self, ctx):
-        """S'exécute automatiquement avant CHAQUE commande du Cog"""
-        guild_id = str(ctx.guild.id)
-        
-        if not self.check("id", guild_id):
-            self.gen_json(guild_id)
-        
-        memb_id = str(ctx.author.id)
-        self.ensure_member(memb_id, ctx.author)
-        
-        self.remp_json()
-
-    # -------------------- CHECK --------------------
-    def check(self, key, value):
-        if "server" not in self.data:
-            return False
-        if key not in self.data["server"]:
-            return False
-        return self.data["server"][key] == value
-
-    # -------------------- GEN_JSON --------------------
-    def gen_json(self, guild_id):
-        if "server" not in self.data:
-            self.data["server"] = {
-                "id": guild_id,
-                "user": {}
-            }
-        else:
-            self.data["server"]["user"] = {}
-
-    # -------------------- JSON --------------------
-    def remp_json(self):
-        self.data_file.save_json(self.data)
 
 # -------------------- Setup --------------------
 async def setup(bot):
