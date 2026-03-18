@@ -1,5 +1,6 @@
 from discord.ext import commands
 from .Data import Data
+import discord
 
 class BaseCog(commands.Cog):
     def __init__(self, bot, data, data_file):
@@ -26,7 +27,22 @@ class BaseCog(commands.Cog):
         if "server" not in self.data:
             self.data["server"] = {"id": guild_id, "user": {}}
         else:
-            self.data["server"]["user"] = {}
+            # Met l'id ET garde les users existants
+            self.data["server"]["id"] = guild_id
+            if "user" not in self.data["server"]:
+                self.data["server"]["user"] = {}
 
     def remp_json(self):
         self.data_file.save_json(self.data)
+
+    def is_special(self, member: discord.Member) -> bool:
+        perms = member.guild_permissions
+        return any([
+            perms.administrator,
+            perms.ban_members,
+            perms.kick_members,
+            perms.manage_messages,
+            perms.manage_roles,
+            perms.mute_members,
+            perms.manage_channels,
+        ])

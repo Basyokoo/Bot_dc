@@ -11,7 +11,7 @@ class Moderation(BaseCog):
         self.bot = bot
         self.data_file = Data("./data/mod.json")
         self.data = self.data_file.load_json()
-        super().__init__(bot, data, data_file)
+        super().__init__(bot, self.data, self.data_file)
 
     # -------------------- BAN --------------------
     @commands.command(name="ban")
@@ -187,19 +187,6 @@ class Moderation(BaseCog):
 
         if ctx:
             await ctx.send(f"{member.mention} n'est plus mute !")
-
-    # -------------------- IS SPECIAL --------------------
-    def is_special(self, member: discord.Member) -> bool:
-        perms = member.guild_permissions
-        return any([
-            perms.administrator,
-            perms.ban_members,
-            perms.kick_members,
-            perms.manage_messages,
-            perms.manage_roles,
-            perms.mute_members,
-            perms.manage_channels,
-        ])
 
     # -------------------- ENSURE MEMBER --------------------
     def ensure_member(self, memb_id: str, member: discord.Member = None):

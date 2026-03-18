@@ -1,3 +1,46 @@
 {
-
+    "server": {
+        "id": "1481952816309469326",
+        "user": {
+            "653855921650532359": {
+                "is_special": true,
+                "name": "basyoko__",
+                "display_name": "un nainfiltrateur",
+                "warns count": 0,
+                "bans count": 0,
+                "mutes count": 0,
+                "kicks count": 0,
+                "bans": [],
+                "warns": [],
+                "mutes": [],
+                "kicks": []
+            },
+            "1211378838970310767": {
+                "is_special": false,
+                "name": "dark's gen bot",
+                "display_name": "dark's gen bot",
+                "warns count": 3,
+                "bans count": 0,
+                "mutes count": 0,
+                "kicks count": 0,
+                "bans": [],
+                "warns": [
+                    {
+                        "reason": "Pas de raison fourni par le moderateur : basyoko__",
+                        "moderator": "basyoko__  /  653855921650532359"
+                    },
+                    {
+                        "reason": "Pas de raison fourni par le moderateur : basyoko__",
+                        "moderator": "basyoko__  /  653855921650532359"
+                    },
+                    {
+                        "reason": "Pas de raison fourni par le moderateur : basyoko__",
+                        "moderator": "basyoko__  /  653855921650532359"
+                    }
+                ],
+                "mutes": [],
+                "kicks": []
+            }
+        }
+    }
 }
