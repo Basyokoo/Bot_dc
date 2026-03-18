@@ -41,7 +41,6 @@
 
 | Tâche | Priorité | Statut |
 |-------|----------|--------|
-| action faite | 🔴 Haute | ⬜ À faire |
 
 ---
 

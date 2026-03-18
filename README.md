@@ -46,6 +46,8 @@ L'entité opère exclusivement dans des environnements contrôlés appelés *"se
 | `ban` | ✅ Opérationnel | Bannir définitivement un sujet |
 | `check` | ✅ Opérationnel | affiche les informations de la personne |
 | `ChkPerm` | ✅ Opérationnel | affiche les permissions de la personne |
+| `unmute` | ✅ Opérationnel | enlève le mute d'une personne |
+| `chkActi` | ✅ Opérationnel | affiche l'activité de la personne (commande taper) |
 
 ---
 

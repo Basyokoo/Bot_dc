@@ -16,68 +16,55 @@ class ModLog(BaseCog):
     @commands.Cog.listener()
     async def on_ready(self):
         self.load_perms()
-        print("✅ Permissions chargées !")
-
+        print("Permissions chargees !")
 
     # -------------------- LOAD PERMS --------------------
     def load_perms(self):
         for guild in self.bot.guilds:
-            self.ensure_guild(str(guild.id))
-
+            guild_id = str(guild.id)
+            self.ensure_guild(guild_id)
             for member in guild.members:
                 if member.bot:
                     continue
                 member_id = str(member.id)
-                self.ensure_member(member_id, member)
-                self.data["server"]["user"][member_id]["permissions"] = self.get_permissions(member)
-
+                self.ensure_member(guild_id, member_id, member)
+                self.data[guild_id]["user"][member_id]["permissions"] = self.get_permissions(member)
         self.data_file.save_json(self.data)
-
 
     # -------------------- GET PERMISSIONS --------------------
     def get_permissions(self, member: discord.Member) -> list:
         perms = member.guild_permissions
         return [perm for perm, value in perms if value]
-        # Version longue équivalente
-        """result = []
-        for perm, value in perms:   # perm = "ban_members", value = True/False
-            if value:                # si la permission est activée
-                result.append(perm)  # on l'ajoute à la liste
-        return result"""
-
 
     # -------------------- CHECK PERM --------------------
     @commands.command(name="ChkPerm")
     async def chk_perm(self, ctx, members: commands.Greedy[discord.Member]):
         await self.cog_before_invoke(ctx)
-
         if not members:
             return await ctx.send("Il faut entrer au moins un membre !")
 
+        guild_id = str(ctx.guild.id)
+        self.ensure_guild(guild_id)
+
         for member in members:
             member_id = str(member.id)
-            self.ensure_member(member_id, member)
-
-            perms = self.data["server"]["user"][member_id]["permissions"]
-
-            perms_str = "\n".join([f"• `{p}`" for p in perms]) or "Aucune permission"
-
+            self.ensure_member(guild_id, member_id, member)
+            perms = self.data[guild_id]["user"][member_id]["permissions"]
+            perms_str = "\n".join([f"- {p}" for p in perms]) or "Aucune permission"
             await ctx.send(
-                f"👤 **{member.display_name}** (`{member_id}`)\n"
-                f"🔑 **Permissions :**\n{perms_str}"
+                f"**{member.display_name}** (`{member_id}`)\n"
+                f"**Permissions :**\n{perms_str}"
             )
 
-
     # -------------------- ENSURE MEMBER --------------------
-    def ensure_member(self, memb_id: str, member: discord.Member = None):
-        if memb_id not in self.data["server"]["user"]:
-            self.data["server"]["user"][memb_id] = {
+    def ensure_member(self, guild_id: str, memb_id: str, member: discord.Member = None):
+        if memb_id not in self.data[guild_id]["user"]:
+            self.data[guild_id]["user"][memb_id] = {
                 "is_special": self.is_special(member) if member else False,
                 "name": member.name if member else "inconnu",
                 "display_name": member.display_name if member else "inconnu",
                 "permissions": []
             }
-
 
 # -------------------- Setup --------------------
 async def setup(bot):
