@@ -15,6 +15,11 @@ class BaseCog(commands.Cog):
         memb_id = str(ctx.author.id)
         self.ensure_member(memb_id, ctx.author)
         self.remp_json()
+        
+    def ensure_guild(self, guild_id: str):
+        if not self.check("id", guild_id):
+            self.gen_json(guild_id)
+        self.data_file.save_json(self.data)
 
     def check(self, key, value):
         if "server" not in self.data:

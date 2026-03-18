@@ -20,7 +20,7 @@ class MyBot(commands.Bot):
 
     async def setup_hook(self):
         # Charger les cogs avant le login
-        for cog in ["Moderation","Log"]:
+        for cog in ["Moderation","Log","ModLog"]:
             await self.load_extension(f"cogs.{cog}")
 
 bot = MyBot()

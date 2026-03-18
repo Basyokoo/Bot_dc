@@ -41,9 +41,7 @@
 
 | Tâche | Priorité | Statut |
 |-------|----------|--------|
-| message envoyer | 🔴 Haute | ⬜ À faire |
 | action faite | 🔴 Haute | ⬜ À faire |
-| heures de vocal | 🟡 Moyenne | ⬜ À faire |
 
 ---
 

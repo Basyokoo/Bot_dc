@@ -15,13 +15,6 @@ class Log(BaseCog):
         self.voice_sessions = {}
         super().__init__(bot, self.data, self.data_file)
 
-    # -------------------- ENSURE GUILD --------------------
-    # Remplace cog_before_invoke pour les listeners
-    def ensure_guild(self, guild_id: str):
-        if not self.check("id", guild_id):
-            self.gen_json(guild_id)
-        self.data_file.save_json(self.data)
-
     # -------------------- ENSURE MEMBER --------------------
     # s'assure que le membre est present dans le json
     def ensure_member(self, memb_id: str, member: discord.Member = None):
