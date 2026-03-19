@@ -3,7 +3,9 @@ from discord.ext import commands
 import asyncio
 import signal
 import time
-from cogs.Data import Data
+from cogs import *
+from utils.Data import Data
+from utils.base_cog import BaseCog
 
 TOKEN = Data("./data/token.json").load_json()["token"]
 
@@ -18,7 +20,7 @@ class MyBot(commands.Bot):
 
     async def setup_hook(self):
         # Charger les cogs avant le login
-        for cog in ["Moderation"]:
+        for cog in ["Moderation","Log","ModLog"]:
             await self.load_extension(f"cogs.{cog}")
 
 bot = MyBot()
