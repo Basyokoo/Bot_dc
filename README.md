@@ -54,7 +54,7 @@ L'entité opère exclusivement dans des environnements contrôlés appelés *"se
 ## 🔬 Modules en développement
 
 ```
-[ ███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ ] — En cours...
+[ █████░░░░░░░░░░░░░░░░░░░░░░░░░░░░ ] — En cours...
 ```
 
 - `[CLASSIFIÉ]` — Module #1
