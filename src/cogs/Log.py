@@ -9,11 +9,18 @@ class Log(BaseCog):
     """Cog pour la modération : ban, mute, warn..."""
 
     def __init__(self, bot):
+        self.cogsdt = {}
         self.bot = bot
         self.data_file = Data("./data/log.json")
         self.data = self.data_file.load_json()
         self.voice_sessions = {}
         super().__init__(bot, self.data, self.data_file)
+
+    @commands.Cog.listener()
+    async def on_ready(self):
+        for cog_name, cog in self.bot.cogs.items():
+            self.cogsdt[cog_name] = [command.name for command in cog.get_commands()]
+        #print(f"cogsdt : {self.cogsdt}")  # pour vérifier
 
     # -------------------- ENSURE MEMBER --------------------
     def ensure_member(self, guild_id: str, memb_id: str, member: discord.Member = None):
@@ -48,7 +55,7 @@ class Log(BaseCog):
 
             await ctx.send(
                 f"👤 **{member.display_name}** (`{memb_id}`)\n"
-                f"💬 Messages envoyés : `{self.data[guild_id]['user'][memb_id]['messages count']}`\n"
+                f"💬 Messages envoyés : `{self.data[guild_id]['user'][memb_id]['messages count']+1}`\n"
                 f"🎙️ Temps en vocal : `{hours}h {minutes}m {seconds}s`"
             )
 
@@ -65,12 +72,16 @@ class Log(BaseCog):
 
         self.data[guild_id]["user"][member_id]["messages count"] += 1
 
-        if message.content and message.content[0] == '!':
+        if message.content and message.content[0] == '*':
             command_name = message.content[1:].split()[0]
+            #print(f"command_name : {command_name}")
             command = self.bot.get_command(command_name)
-            if command and command.cog_name == "Moderation":
+            #print(f"command : {command}")
+            #print(f"cog_name : {command.cog_name if command else 'None'}")
+            #print(f"cogsdt : {self.cogsdt}")
+            if command and command.cog_name in self.cogsdt:
                 self.data[guild_id]["user"][member_id]["activite"].append(
-                    ("moderation", message.content)
+                    (command.cog_name, message.content)
                 )
 
         self.data_file.save_json(self.data)

@@ -20,6 +20,12 @@ class ModLog(BaseCog):
 
     # -------------------- LOAD PERMS --------------------
     def load_perms(self):
+        # Supprime les guilds où le bot n'est plus présent
+        guilds_actives = [str(guild.id) for guild in self.bot.guilds]
+        for guild_id in list(self.data.keys()):
+            if guild_id not in guilds_actives:
+                del self.data[guild_id]
+
         for guild in self.bot.guilds:
             guild_id = str(guild.id)
             self.ensure_guild(guild_id)

@@ -1,12 +1,10 @@
 {
-    "server": {
-        "id": "1481952816309469326",
+    "1481952816309469326": {
         "user": {
             "653855921650532359": {
                 "is_special": true,
                 "name": "basyoko__",
                 "display_name": "un nainfiltrateur",
-                "permission": [],
                 "permissions": [
                     "create_instant_invite",
                     "kick_members",
