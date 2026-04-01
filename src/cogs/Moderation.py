@@ -12,7 +12,9 @@ class Moderation(BaseCog):
     def __init__(self, bot):
         self.bot = bot
         self.data_file = Data("./data/mod.json")
+        self.data_file2 = Data("./data/join.json")
         self.data = self.data_file.load_json()
+        self.data2 = self.data_file2.load_json()
         super().__init__(bot, self.data, self.data_file)
 
     # -------------------- ENSURE MEMBER --------------------
@@ -62,10 +64,20 @@ class Moderation(BaseCog):
                     "moderator": str(ctx.author) + "  /  " + str(ctx.author.id)
                 })
 
+                for guild_id in self.data2:
+                    if memb_id not in self.data2[guild_id]["user"]:
+                        self.data2[guild_id]["user"][memb_id] = {
+                            "is_special": self.is_special(member) if member else False,
+                            "name": member.name if member else "inconnu",
+                            "display_name": member.display_name if member else "inconnu",
+                            "is Banned": False
+                        }
+                    self.data2[guild_id]["user"][memb_id]["is Banned"] = True
             except Exception as e:
                 await ctx.send(f"Impossible de bannir {member} : {e}")
 
         self.data_file.save_json(self.data)
+        self.data_file2.save_json(self.data2)
 
     # -------------------- PARDON --------------------
     @commands.command(name="pardon")

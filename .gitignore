@@ -3,3 +3,5 @@ token.json
 __pycache__
 mod.json
 log.json
+modperm.json
+join.json
