@@ -35,19 +35,28 @@ class Protec(BaseCog):
 
         ensure_member(guild_id,member_id,member)
 
-        # Parcourt du dico des joins (check si le membre est ban all)
+        if (self.data[guild_id]["user"][memb_id]["is Banned"] == True) :
+            Mod = self.bot.cogs.get("Moderation")
+            if Mod:
+                await Mod.ban(...)
+
+    # Parcourt du dico des joins (check si le membre est ban all)
+
         
 
 
     # -------------------- ENSURE MEMBER --------------------
     def ensure_member(self, guild_id: str, memb_id: str, member: discord.Member = None):
-        """Crée l'entrée d'un membre dans le JSON s'il n'existe pas"""
+        """
+        Crée l'entrée d'un membre dans le JSON s'il n'existe pas dans ce dernier
+        """
+        
         if memb_id not in self.data[guild_id]["user"]:
             self.data[guild_id]["user"][memb_id] = {
                 "is_special": self.is_special(member) if member else False,
                 "name": member.name if member else "inconnu",
                 "display_name": member.display_name if member else "inconnu",
-                "is Banned" : False
+                "is_Banned" : False
             }
 
 
