@@ -38,12 +38,8 @@ class Protec(BaseCog):
         if (self.data[guild_id]["user"][memb_id]["is Banned"] == True) :
             Mod = self.bot.cogs.get("Moderation")
             if Mod:
-                await Mod.ban(...)
-
-    # Parcourt du dico des joins (check si le membre est ban all)
-
+                await Mod.apply_ban(member_id,"Banni automatiquement par le système (banni dans un autre serveur)")
         
-
 
     # -------------------- ENSURE MEMBER --------------------
     def ensure_member(self, guild_id: str, memb_id: str, member: discord.Member = None):

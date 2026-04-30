@@ -36,48 +36,58 @@ class Moderation(BaseCog):
                 "kicks": []
             }
 
-    # -------------------- BAN --------------------
-    @commands.command(name="ban")
-    @commands.has_permissions(ban_members=True)
-    async def ban(self, ctx, members: commands.Greedy[discord.Member], *, reason=None):
-        if not members:
-            await ctx.send("Veuillez entrer au moins un membre à bannir !")
-            return
-        
-        if not reason:
-            reason = f"Pas de raison fourni par le moderateur : {ctx.author}"
+# -------------------- APPLY_BAN --------------------
+async def apply_ban(self, member, reason):
+    try:
+        await member.ban(reason=reason)
+        return None
+    except Exception as e:
+        return e
 
-        guild_id = str(ctx.guild.id)
-        self.ensure_guild(guild_id)
+# -------------------- BAN --------------------
+@commands.command(name="ban")
+@commands.has_permissions(ban_members=True)
+async def ban(self, ctx, members: commands.Greedy[discord.Member], *, reason=None):
+    if not members:
+        await ctx.send("Veuillez entrer au moins un membre à bannir !")
+        return
 
-        for member in members:
-            memb_id = str(member.id)
-            self.ensure_member(guild_id, memb_id, member)
+    if not reason:
+        reason = f"Pas de raison fourni par le moderateur : {ctx.author}"
 
-            try:
-                await member.ban(reason=reason)
-                await ctx.send(f"{member} a été banni !")
+    guild_id = str(ctx.guild.id)
+    self.ensure_guild(guild_id)
 
-                self.data[guild_id]["user"][memb_id]["bans count"] += 1
-                self.data[guild_id]["user"][memb_id]["bans"].append({
-                    "reason": reason,
-                    "moderator": str(ctx.author) + "  /  " + str(ctx.author.id)
-                })
+    for member in members:
+        memb_id = str(member.id)
+        self.ensure_member(guild_id, memb_id, member)
 
-                for guild_id in self.data2:
-                    if memb_id not in self.data2[guild_id]["user"]:
-                        self.data2[guild_id]["user"][memb_id] = {
-                            "is_special": self.is_special(member) if member else False,
-                            "name": member.name if member else "inconnu",
-                            "display_name": member.display_name if member else "inconnu",
-                            "is Banned": False
-                        }
-                    self.data2[guild_id]["user"][memb_id]["is Banned"] = True
-            except Exception as e:
-                await ctx.send(f"Impossible de bannir {member} : {e}")
+        erreur = await self.apply_ban(member, reason)
 
-        self.data_file.save_json(self.data)
-        self.data_file2.save_json(self.data2)
+        if erreur:
+            await ctx.send(f"Impossible de bannir {member} : {erreur}")
+            continue
+
+        await ctx.send(f"{member} a été banni !")
+
+        self.data[guild_id]["user"][memb_id]["bans count"] += 1
+        self.data[guild_id]["user"][memb_id]["bans"].append({
+            "reason": reason,
+            "moderator": str(ctx.author) + "  /  " + str(ctx.author.id)
+        })
+
+        for gid in self.data2:
+            if memb_id not in self.data2[gid]["user"]:
+                self.data2[gid]["user"][memb_id] = {
+                    "is_special": self.is_special(member),
+                    "name": member.name,
+                    "display_name": member.display_name,
+                    "is Banned": False
+                }
+            self.data2[gid]["user"][memb_id]["is Banned"] = True
+
+    self.data_file.save_json(self.data)
+    self.data_file2.save_json(self.data2)
 
     # -------------------- PARDON --------------------
     @commands.command(name="pardon")
