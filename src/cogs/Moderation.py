@@ -79,6 +79,8 @@ class Moderation(BaseCog):
         self.data_file.save_json(self.data)
         self.data_file2.save_json(self.data2)
 
+    
+
     # -------------------- PARDON --------------------
     @commands.command(name="pardon")
     async def pardon(self, ctx, members: commands.Greedy[discord.Member], *, reason=None):
