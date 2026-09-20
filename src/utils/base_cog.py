@@ -45,3 +45,5 @@ class BaseCog(commands.Cog):
             perms.mute_members,
             perms.manage_channels,
         ])
+    
+    #def check_
